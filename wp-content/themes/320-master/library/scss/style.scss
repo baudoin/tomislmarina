@@ -7,18 +7,18 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 ============================================================ */
 
-// IMPORTS 				=======================================
+//// IMPORTS
 
 @import "compass"; // Compass
 @import "reset"; // CSS reset
 @import "mixins"; // Mixins
 @import "susy"; // Susy Grids
  
-/* Typography */
+// Typography
  
 @import "typography"; // Block level (h1, p) and text-level (em, strong) type
 
-/* UI */
+// UI
 
 @import "texture"; // Alerts, badges, boxes and gradients
 @import "forms"; // Standard form controls
@@ -27,11 +27,11 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 @import "tables"; // Tables
 @import "nav"; // Navigation
 
-/* Base Site Styles */
+// Base Site Styles
 
 @import "base";
 
-/* Media Queries */
+// Media Queries
 
 @media print {
 @import "print";

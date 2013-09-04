@@ -7,9 +7,7 @@
 
 // ==========================================================
 
-/* Base =================================================== */
-
-// GRID		 			=====================================
+//// GRID
 
 // Susy Grid Variables
 $total-columns  : 7;
@@ -18,7 +16,7 @@ $gutter-width   : 1em;
 $grid-padding   : $gutter-width;
 $container-style: fluid;
 
-// ROOT 				=====================================
+//// ROOT
 
 @-webkit-viewport { 
 	width : device-width; 
@@ -37,7 +35,7 @@ $container-style: fluid;
 }
 
 html {
-	background : $bodycolor;
+	background : $lighterblue;
 	font-size : 62.5%;
 	-webkit-overflow-scrolling : touch;
 	-webkit-tap-highlight-color : lighten($basecolor, 75%);
@@ -47,8 +45,7 @@ html {
 
 body {
 	@include font-size();
-
-	background-color : transparent;
+	background-color : $lighterblue;
 	font-family : $basefont;
 	line-height : $baselineheight;
 	color : $textcolor;
@@ -57,14 +54,39 @@ body {
 	width : 100%;
 }
 
-// 
+// Layout
 
-#container {
-	@include container; // Susy
-
-	padding: $gutter-width;
+.row {
+	@include container; // Susy container
+	max-width: 1080px;
 }
 
-// TYPOGRAPHY 			=====================================
-// ELEMENTS 			=====================================
-// LAYOUT 				=====================================
+// Header 
+
+header {
+	background: $white;
+	padding: 2em 0 2.2em 0;
+
+	#logo {
+
+		a {
+			@include hide-text();
+			@include at2x(logo,246px,88px);
+			background-repeat: no-repeat;
+			display: block;
+			margin: 0 auto;
+			height:88px;
+			width:246px;
+		}
+	}
+}
+
+footer {
+	text-align: center;
+	padding-top: 200px;
+	padding-bottom: 10px;
+	
+	.copyright {
+		color: $lightblue;
+	}
+}

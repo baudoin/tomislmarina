@@ -7,38 +7,38 @@
 
 // ==========================================================
 
-/* Mixins =================================================== */
+//// VARIABLES
 
-// VARIABLES 				==============================
+// Typography
 
-/* Typography */
-
-$basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$basefont : "Open Sans Condensed", Helvetica, Arial, sans-serif;
 $basefontsize : 16;
-$baselineheight : 1.33em;
+$baselineheight : 1.45em;
 $baseheadingfont : inherit;
 $baseheadingfontweight : bold;
-$baseheadingfontcolor : inherit;
+$baseheadingfontcolor : #0c1627;
 
 $altfont : Cambria, Georgia, Times, "Times New Roman";
 $altlineheight : 1.35em;
 
 $codefont : Monaco, Courier New, monospace;
 
-/* Color */
+//// COLOR
 
 // grayscale
 
 $black 			: rgb(0,0,0);
 $darkgray 		: lighten($black, 25%);
-$gray 			: lighten($black, 50%);
+$gray 			: #787b80;
 $lightgray 		: lighten($black, 75%);
 $lightergray 	: lighten($black, 90%);
 $white 			: rgb(255,255,255);
 
-$blue			: rgb(78,187,255);
+$blue			: rgb(85,177,217);
+$lightblue 		: rgb(161,192,214);
+$lighterblue 	: #e8f3fa;
 
-$bodycolor 		: $white;
+$bodycolor 		: $gray;
 $textcolor 		: $darkgray;
 $basecolor 		: rgb(45,53,62);
 $compcolor 		: adjust-hue($basecolor, 180);
@@ -99,10 +99,11 @@ $badgecolor 		: $gray;
 
 // buttons
 
-$buttonbackground 	: $lightergray;
+$buttonbackground 	: $white;
 $buttonbordercolor 	: darken($buttonbackground, 10%);
 $buttonbottombordercolor : darken($buttonbordercolor, 10%);
-$buttoncolor 		: $darkgray;
+$buttoncolor 		: $lightblue;
+$buttonhovercolor 	: $blue;
 $buttonborderwidth	: 1px;
 $buttonborderstyle	: solid;
 
@@ -142,13 +143,8 @@ $textDirection: ltr;
 $defaultFloat: left;
 $defaultOpposite: right;
 
-// Nav Bar Settings
 
-$navBarHeight: 40px;
-$navFlyoutBaseWidth: 250px;
-
-
-// TYPOGRAPHY 				==============================
+//// TYPOGRAPHY
 
 @mixin font-size($font-size: 16){
 font-size : #{$font-size}px;
@@ -160,7 +156,7 @@ text-overflow : ellipsis;
 white-space : nowrap; }
 
 
-// GRADIENTS 					==============================
+//// GRADIENTS
 
 @mixin horizontal($startColor : $white, $endColor : $lightergrey) {
 	background-color: $endColor;
@@ -194,7 +190,7 @@ white-space : nowrap; }
 	@include box-shadow($x-axis $y-axis $blur rgba(0, 0, 0, $alpha)); 
 }
 
-// ELEMENTS 				==============================
+//// ELEMENTS
 
 // links 
 
@@ -302,7 +298,19 @@ figure {
 	background-color : hsla(hue($color), saturation($color), lightness($color), $alpha); 
 }
 
-// CSS Triangle
+// Retina swap bg image
+
+@mixin at2x($image_name, $w: auto, $h: auto, $extention: '.png') {
+  background-image: image_url($image_name + $extention);
+  $x2img : $image_name + '@2x' + $extention;
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5) {
+    background-image: image_url($x2img);
+    background-size: $w $h;
+  }  
+}
+
+//// CSS Triangle
 
 // Create CSS Triangles in a Breeze
 

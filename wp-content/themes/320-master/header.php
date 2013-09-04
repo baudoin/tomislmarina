@@ -29,10 +29,6 @@
 	<!--[if (lt IE 9) & (!IEMobile)]>
 	<script src="js/selectivizr.min.js"></script>
 	<![endif]-->
-		
-	<!-- drop Google Analytics Here -->
-
-	<!-- end analytics -->
 	
 </head>
 
@@ -40,18 +36,16 @@
 
 	<div id="container">
 		
-		<header class="header" role="banner">
-		
-			<div id="inner-header" class="wrap clearfix">
+		<header class="header clearfix" role="banner">
+
+			<div class="row">
 				
-				<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-				
-				<?php // bloginfo('description'); ?>
-				
+				<div id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></div>
+							
 				<nav role="navigation">
 					<?php main_nav(); ?>
 				</nav>
-			
-			</div> <!-- end #inner-header -->
-		
+
+			</div>
+					
 		</header> <!-- end header -->

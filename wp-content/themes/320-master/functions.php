@@ -8,7 +8,7 @@ URL: htp://themble.com/bones/
 
 require_once('library/bones.php'); // if you remove this, bones will break
 /* custom post-type template */
-// require_once('library/custom-post-type.php'); // you can disable this if you like
+require_once('library/custom-post-type.php'); // you can disable this if you like
 /* function file for altering admin if needed */
 // require_once('library/admin.php'); // this comes turned off by default
 
