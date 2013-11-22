@@ -7,18 +7,24 @@
 
 // ==========================================================
 
+//// Border-Box FTW
+
+* { @include box-sizing(border-box); }
+
 //// VARIABLES
 
 // Typography
 
-$basefont : "Open Sans Condensed", Helvetica, Arial, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700);
+
+$basefont : "Roboto", Helvetica, Arial, sans-serif;
 $basefontsize : 16;
 $baselineheight : 1.45em;
 $baseheadingfont : inherit;
-$baseheadingfontweight : bold;
-$baseheadingfontcolor : #0c1627;
+$baseheadingfontweight : 300;
+$baseheadingfontcolor : #0f1d32;
 
-$altfont : Cambria, Georgia, Times, "Times New Roman";
+$altfont : "Roboto Condensed", Helvetica, Arial, sans-serif;
 $altlineheight : 1.35em;
 
 $codefont : Monaco, Courier New, monospace;

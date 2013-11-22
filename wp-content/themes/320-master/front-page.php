@@ -7,20 +7,18 @@
 				    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 										
 					    <section class="entry-content clearfix">
+						    
 						    <?php the_content(); ?>
+
+						    <?php include('available-slips.php'); ?>
+
+						    <!-- <a href="/boat-moorage" class="button right">View All Slips</a> -->
+
 					    </section>
 
-					    <h2>Available Slips:</h2>
-					    										
-				    <?php endwhile; ?>	
+				    <?php endwhile; ?>
 				
-				    <?php else : ?>
-				    
-			            <section class="entry-content">
-			        	    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
-			        	</section>
-				
-				    <?php endif; ?>
+				    <?php endif; ?>					
 				    
 				</div> <!-- end #main -->
 

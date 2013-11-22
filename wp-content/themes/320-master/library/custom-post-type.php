@@ -27,12 +27,12 @@ function custom_post() {
 			'show_ui' => true,
 			'query_var' => true,
 			'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */ 
-			'rewrite'	=> array( 'slug' => 'slips', 'with_front' => false ), /* you can specify its url slug */
+			'rewrite'	=> array( 'slug' => 'moorage-slips', 'with_front' => false ), /* you can specify its url slug */
 			'has_archive' => 'slips', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky')
+			'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions')
 	 	) /* end of options */
 	); /* end of register post type */
 	

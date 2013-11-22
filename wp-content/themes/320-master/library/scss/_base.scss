@@ -47,6 +47,7 @@ body {
 	@include font-size();
 	background-color : $lighterblue;
 	font-family : $basefont;
+	font-weight: $baseheadingfontweight;
 	line-height : $baselineheight;
 	color : $textcolor;
 	margin : 0;
@@ -88,5 +89,53 @@ footer {
 	
 	.copyright {
 		color: $lightblue;
+	}
+}
+
+.sidebar {
+	.address {
+		margin: 40px 0 20px;
+	}
+	.email, .map {
+		margin: 0 10px;
+	}
+}
+
+// Components
+
+.slip {
+	margin-left: 0 !important;
+
+	li {
+		@include border-radius(4px);
+		@include clearfix();
+		background: lighten($lighterblue,3%);
+		border: 2px solid darken($lighterblue,3%);
+		padding: 20px;
+		margin-bottom: 20px;
+		list-style: none;
+
+		.thumb {
+			@include span-columns(3,7);
+			margin: 0 0 10px 0;
+		}
+		.length {
+			@include span-columns(4 omega,7);
+			color: $blue;
+			font-weight: 700;
+			@include font-size(36);
+			line-height: 3.5;
+			margin: 0 0 10px 0;
+			text-align: center;
+		}
+		.info {
+			display: block;
+			clear: both;
+
+			p {
+				margin-bottom: 10px;
+				@include font-size(14);
+			}
+		}
 	}
 }

@@ -32,6 +32,36 @@ $total-columns  : 12;
 	padding-top: 1.5em;
 }
 
+// UI & Elements
+
+.booking_form_div {
+	@include clearfix;
+
+	.block_hints {
+		margin-bottom: 50px !important;
+	}
+}
+
+form {
+	.control-group {
+		@include clearfix;
+		@include span-columns(10,12);
+		clear: both;
+		margin-top: 0 !important;
+
+		label {
+			@include span-columns(4,12);
+			padding-left: $gutter-width;
+		}
+		.controls {
+			@include span-columns(8 omega,12);
+		}
+	}
+
+	.btn-primary {
+	}
+}
+
 // Header
 
 header {
@@ -45,7 +75,7 @@ header {
 		@include span-columns(8 omega,12);
 
 		.nav-bar {
-			margin-top: 2.25em;
+			margin-top: 2.75em;
 			
 			li {
 				a {
@@ -62,6 +92,24 @@ header {
 	.button {
 		display: block;
 		margin: 0 auto 20px;
-		max-width: 50%;
+		max-width: 80%;
+	}
+}
+
+// Components
+
+.slip {
+
+	li {
+		.thumb {
+			@include span-columns(3,12);
+		}
+		.length {
+			@include span-columns(4,12);
+		}
+		.info {
+			@include span-columns(5 omega, 12);
+			clear: none;
+		}
 	}
 }

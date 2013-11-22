@@ -7,17 +7,17 @@
 
 // ==========================================================
 
-.button {
+.button, .btn {
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
   *zoom: 1;
-  padding: .75em 2em;
+  padding: .75em 1.5em;
   margin-bottom: 0;
 
   font: {
-    weight: bold;
-    family: $basefont;
+    weight: 700;
+    family: $altfont;
   }
 
   @include font-size(18);
@@ -28,12 +28,14 @@
   vertical-align: middle;
   background-color: $buttonbackground;
 
-  border: 1px solid $buttoncolor;
+  border: 2px solid $buttoncolor;
 
   @include border-radius(4px);
 
   cursor: pointer;
   *margin-left: .3em;
+
+  text-transform: uppercase;
 
   &:visited,
   &:hover {
@@ -103,17 +105,16 @@ input[type="submit"].button:hover { border-color: $buttonbordercolor; }
 // primary
 
 .button-primary {
-  @include basegrad;
+  // @include basegrad;
 
   border: {
     color: darken($basecolor, 15%);
-    bottom-color: darken($basecolor, 20%);
   }
 
-  color: $white;
+  color: $basecolor;
 
   &:visited,
-  &:hover { color: $white; }
+  &:hover { color: $buttonhovercolor; }
 }
 
 // success

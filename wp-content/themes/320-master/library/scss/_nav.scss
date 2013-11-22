@@ -9,11 +9,16 @@
         a {
             @include font-size(24);
             color: $gray;
+            font-family: $altfont;
 
             &:hover {
                 color: $blue;
                 text-decoration: none;
             }
+        }
+
+        &.current_page_item a {
+            color: $blue;
         }
     }
 }
